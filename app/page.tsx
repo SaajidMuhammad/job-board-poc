@@ -1,7 +1,17 @@
-export default function Home() {
+import { PageLayout } from "@/layouts/page-layout"
+import { JobFilters } from "@/components/job-filters"
+import { JobList } from "@/components/job-list"
+
+export default function HomePage() {
   return (
-    <div>
-      <h1>Job board App</h1>
-    </div>
+    <PageLayout
+      title="Find Your Dream Job"
+      description="Discover amazing opportunities from top companies around the world."
+    >
+      <div className="space-y-8">
+        <JobFilters />
+        <JobList />
+      </div>
+    </PageLayout>
   );
 }
