@@ -134,9 +134,10 @@ const jobs: Job[] = [
   },
 ]
 
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
-    const job = jobs.find((j) => j.id === params.id)
+    const { id } = await params
+    const job = jobs.find((j) => j.id === id)
 
     if (!job) {
       return NextResponse.json({ error: "Job not found" }, { status: 404 })
@@ -149,10 +150,11 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
   }
 }
 
-export async function PUT(request: NextRequest, { params }: { params: { id: string } }) {
+export async function PUT(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
+    const { id } = await params
     const body = await request.json()
-    const jobIndex = jobs.findIndex((j) => j.id === params.id)
+    const jobIndex = jobs.findIndex((j) => j.id === id)
 
     if (jobIndex === -1) {
       return NextResponse.json({ error: "Job not found" }, { status: 404 })
@@ -186,9 +188,10 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
   }
 }
 
-export async function DELETE(request: NextRequest, { params }: { params: { id: string } }) {
+export async function DELETE(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
-    const jobIndex = jobs.findIndex((j) => j.id === params.id)
+    const { id } = await params
+    const jobIndex = jobs.findIndex((j) => j.id === id)
 
     if (jobIndex === -1) {
       return NextResponse.json({ error: "Job not found" }, { status: 404 })
