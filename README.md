@@ -86,19 +86,6 @@ job-board-poc/
 - `npm run lint` - Run ESLint
 - `npm run type-check` - Run TypeScript type checking
 
-## 🏢 Featured Companies
-
-- **WSO2** - Enterprise middleware solutions
-- **Virtusa** - Digital transformation services
-- **Sysco Labs** - Technology consulting
-- **99X Technology** - Software development
-- **IFS** - Enterprise software solutions
-- **CodeGen International** - IT services
-- **MillenniumIT ESP** - Financial technology
-- **Zone24x7** - Software engineering
-- **John Keells IT** - IT solutions
-- **PickMe** - Ride-hailing platform
-
 ## 📱 Responsive Design
 
 The application is fully responsive and optimized for:
@@ -117,38 +104,11 @@ Modify the filter options in `src/components/job-filters.tsx` to add new filteri
 ### Styling
 The project uses Tailwind CSS for styling. Customize the design by modifying the Tailwind classes in the components.
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
 ## 👨‍💻 Developed by Saajid Muhammad
 
 ### 💻 **Frontend Engineer | React • Next.js • React Native • TypeScript**
 
 ⚡ I build **scalable apps with clean code and pixel-perfect UI/UX.**
-
-### 🛠 Tech Stack
-
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![React Native](https://img.shields.io/badge/React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
-
-### 🚀 Projects I Led & Worked On
-
-🔹 **[ExpandoAI](#)** – AI-powered platform | *Lead Engineer*
-🔹 **[Skouthub](#)** – Next.js web app for sports | *Senior Engineer*
-🔹 **[Koachhub](#)** – Mobile app (React Native/Expo) | *Senior Engineer*
-🔹 **[ConferWith](#)** – E-commerce video shopping solution | *UI Engineer*
 
 ### 📫 Connect With Me
 
