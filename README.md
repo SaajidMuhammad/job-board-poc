@@ -1,6 +1,6 @@
-# 🚀 SL JobBoard - Sri Lankan Job Portal
+# 🚀 Job Board Application
 
-A modern, responsive job board application built with Next.js 14, TypeScript, and Tailwind CSS, specifically designed for the Sri Lankan job market.
+A modern, responsive job board application built with Next.js, TypeScript, and Tailwind CSS, specifically designed for the job market.
 
 ## ✨ Features
 
@@ -11,7 +11,7 @@ A modern, responsive job board application built with Next.js 14, TypeScript, an
 - 🎯 **Smart Filtering** - Filter by job type, location, and company
 - 📄 **Pagination** - 12 jobs per page with smooth navigation
 - 📱 **Responsive Design** - Works perfectly on desktop, tablet, and mobile
-- ⚡ **Fast Performance** - Built with Next.js 14 and optimized for speed
+- ⚡ **Fast Performance** - Built with Next.js and optimized for speed
 
 ## 🛠 Tech Stack
 
@@ -58,7 +58,7 @@ Make sure you have the following installed:
 
 ```
 job-board-poc/
-├── app/                    # Next.js 14 app directory
+├── app/                    # Next.js app directory
 │   ├── api/               # API routes
 │   ├── globals.css        # Global styles
 │   ├── layout.tsx         # Root layout
