@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <PageLayout
       title="Find Your Dream Job"
-      description="Discover amazing opportunities from top companies around the world."
+      description="Discover amazing opportunities from top companies in Sri Lanka."
     >
       <div className="space-y-8">
         <JobFilters />

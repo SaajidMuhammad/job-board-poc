@@ -180,7 +180,7 @@ export function AddJobForm() {
                 id="company"
                 value={formData.company}
                 onChange={(e) => handleInputChange("company", e.target.value)}
-                placeholder="e.g. TechCorp Inc."
+                placeholder="e.g. WSO2, Virtusa, Sysco Labs"
                 className={errors.company ? "border-destructive" : ""}
               />
               {errors.company && <p className="text-sm text-destructive mt-1">{errors.company}</p>}
@@ -196,7 +196,7 @@ export function AddJobForm() {
                 id="location"
                 value={formData.location}
                 onChange={(e) => handleInputChange("location", e.target.value)}
-                placeholder="e.g. San Francisco, CA or Remote"
+                placeholder="e.g. Colombo, Sri Lanka or Remote"
                 className={errors.location ? "border-destructive" : ""}
               />
               {errors.location && <p className="text-sm text-destructive mt-1">{errors.location}</p>}
@@ -230,7 +230,7 @@ export function AddJobForm() {
                 id="salary"
                 value={formData.salary}
                 onChange={(e) => handleInputChange("salary", e.target.value)}
-                placeholder="e.g. $80,000 - $120,000 or $50/hour"
+                placeholder="e.g. LKR 200,000 - LKR 300,000 or LKR 3,000/hour"
               />
             </div>
 
@@ -288,7 +288,7 @@ export function AddJobForm() {
                 value={currentRequirement}
                 onChange={(e) => setCurrentRequirement(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="e.g. React, 3+ years experience, Bachelor's degree"
+                placeholder="e.g. React, 3+ years experience, Bachelor's degree in IT"
               />
               <Button type="button" onClick={addRequirement} disabled={!currentRequirement.trim()} size="icon">
                 <Plus className="h-4 w-4" />
