@@ -30,7 +30,7 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Briefcase className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold text-foreground">SL JobBoard</span>
+            <span className="text-xl font-bold text-foreground">Job Board Application</span>
           </Link>
 
           {/* Navigation Links */}
