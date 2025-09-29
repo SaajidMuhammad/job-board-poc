@@ -4,9 +4,10 @@ import { useJobs } from "@/contexts/job-context"
 import { JobCard } from "@/components/job-card"
 import { Card, CardContent } from "@/components/ui/card"
 import { Briefcase } from "lucide-react"
+import { Pagination } from "@/components/pagination"
 
 export function JobList() {
-  const { filteredJobs, loading } = useJobs()
+  const { filteredJobs, loading, currentPage } = useJobs()
 
   if (loading) {
     return (
@@ -43,17 +44,19 @@ export function JobList() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
+      {/* <div className="flex items-center justify-between">
         <p className="text-muted-foreground">
-          Showing {filteredJobs.length} job{filteredJobs.length !== 1 ? "s" : ""}
+          Showing {filteredJobs.length} job{filteredJobs.length !== 1 ? "s" : ""} on page {currentPage}
         </p>
-      </div>
+      </div> */}
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredJobs.map((job) => (
           <JobCard key={job.id} job={job} />
         ))}
       </div>
+
+      <Pagination />
     </div>
   )
 }

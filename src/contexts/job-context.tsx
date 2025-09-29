@@ -16,9 +16,10 @@ export function JobProvider({ children }: { children: ReactNode }) {
   const [jobs, setJobs] = useState<Job[]>(initialJobs);
   const [filters, setFilters] = useState<JobFilters>({});
   const [filteredJobs, setFilteredJobs] = useState<Job[]>(initialJobs);
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [jobsPerPage] = useState(12);
 
-  // Filter jobs based on current filters
   useEffect(() => {
     let filtered = jobs;
 
@@ -49,7 +50,13 @@ export function JobProvider({ children }: { children: ReactNode }) {
     }
 
     setFilteredJobs(filtered);
+    setCurrentPage(1);
   }, [jobs, filters]);
+
+  const totalPages = Math.ceil(filteredJobs.length / jobsPerPage);
+  const startIndex = (currentPage - 1) * jobsPerPage;
+  const endIndex = startIndex + jobsPerPage;
+  const paginatedJobs = filteredJobs.slice(startIndex, endIndex);
 
   const addJob = (jobData: Omit<Job, "id" | "postedDate">) => {
     const newJob: Job = {
@@ -68,14 +75,36 @@ export function JobProvider({ children }: { children: ReactNode }) {
     return jobs.find((job) => job.id === id);
   };
 
+  const goToPage = (page: number) => {
+    setCurrentPage(page);
+  };
+
+  const nextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const prevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
   const value: JobContextType = {
     jobs,
-    filteredJobs,
+    filteredJobs: paginatedJobs,
     filters,
     addJob,
     updateFilters,
     getJobById,
     loading,
+    currentPage,
+    totalPages,
+    jobsPerPage,
+    goToPage,
+    nextPage,
+    prevPage,
   };
 
   return <JobContext.Provider value={value}>{children}</JobContext.Provider>;

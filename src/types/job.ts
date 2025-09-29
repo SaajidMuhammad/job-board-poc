@@ -26,4 +26,10 @@ export interface JobContextType {
   updateFilters: (filters: JobFilters) => void
   getJobById: (id: string) => Job | undefined
   loading: boolean
+  currentPage: number
+  totalPages: number
+  jobsPerPage: number
+  goToPage: (page: number) => void
+  nextPage: () => void
+  prevPage: () => void
 }
